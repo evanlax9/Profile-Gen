@@ -15,7 +15,7 @@ const render = employees => {
     .map(engineer => renderEngineer(engineer))
   );
   html.push(employees
-    .filter(employee => employee.getRole() === "Intern")
+    .filter(employee => employee.getRole() === "intern")
     .map(intern => renderIntern(intern))
   );
 
@@ -34,6 +34,7 @@ const renderManager = manager => {
 };
 
 const renderEngineer = engineer => {
+
   let template = fs.readFileSync(path.resolve(templatesDir, "engineer.html"), "utf8");
   template = replacePlaceholders(template, "name", engineer.getName());
   template = replacePlaceholders(template, "role", engineer.getRole());
