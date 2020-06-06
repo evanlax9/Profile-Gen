@@ -15,7 +15,7 @@ const render = employees => {
     .map(engineer => renderEngineer(engineer))
   );
   html.push(employees
-    .filter(employee => employee.getRole() === "intern")
+    .filter(employee => employee.getRole() === "Intern")
     .map(intern => renderIntern(intern))
   );
 

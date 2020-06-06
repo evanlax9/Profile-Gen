@@ -247,7 +247,6 @@ function init() {
             const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
             members.push(intern);
             id.push(answers.internID);
-            console.log(members);
             createTeam();
         })
 
